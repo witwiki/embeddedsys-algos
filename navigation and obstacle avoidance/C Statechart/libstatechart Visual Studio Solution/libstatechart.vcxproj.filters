@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="C Statechart">
+      <UniqueIdentifier>{63305afc-d39e-4300-b7da-5e6c9cf1b97c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Statechart\target">
+      <UniqueIdentifier>{e38643bc-c0d4-4c9a-a5bb-ae7fbc6e9e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Statechart\target\simulator">
+      <UniqueIdentifier>{1178b20b-21f2-4bbc-b1b9-4e42a5b3d5ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="irobot">
+      <UniqueIdentifier>{af02c219-d395-4f09-a520-b4916eb9c353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="myrio">
+      <UniqueIdentifier>{d30edd2e-40d8-4c97-9782-913174d3aba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="visa">
+      <UniqueIdentifier>{686453ba-9ab4-4239-b12f-f64ee98c5992}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\irobotNavigationStatechart.c">
+      <Filter>C Statechart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\target\simulator\irobotNavigationStatechartSimulation.c">
+      <Filter>C Statechart\target\simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotError.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotSensor.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotSensorPoll.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotSensorStream.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotTime.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotUART.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\xqueue.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobot.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotActuator.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\irobot\irobotCommand.c">
+      <Filter>irobot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\myrio\NiFpga.c">
+      <Filter>myrio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\myrio\UART.c">
+      <Filter>myrio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\myrio\Accelerometer.c">
+      <Filter>myrio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\myrio\MyRio.c">
+      <Filter>myrio</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\irobotNavigationStatechart.h">
+      <Filter>C Statechart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\target\simulator\irobotNavigationStatechartSimulation.h">
+      <Filter>C Statechart\target\simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotError.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotOpcode.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotSensor.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotSensorPoll.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotSensorStream.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotSensorTypes.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotTime.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotTypes.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotUART.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\xqueue.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobot.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotActuator.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotActuatorTypes.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\irobot\irobotCommand.h">
+      <Filter>irobot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\NiFpga.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\NiFpga_MyRio1900Fpga10.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\NiFpga_MyRio1950Fpga10.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\UART.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\Accelerometer.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\MyRio.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\MyRio1900.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\myrio\MyRio1950.h">
+      <Filter>myrio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\visa\visatype.h">
+      <Filter>visa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\visa\visa.h">
+      <Filter>visa</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\visa\libvisa.so">
+      <Filter>visa</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\visa\visa32.lib">
+      <Filter>visa</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

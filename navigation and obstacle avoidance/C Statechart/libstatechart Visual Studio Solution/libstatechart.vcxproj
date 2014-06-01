@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CCDD4C38-E153-4E48-8688-EC00CCE04040}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libstatechart</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\..\..\CyberSim\</OutDir>
+    <IncludePath>..\;..\target\myrio;..\target\simulator;..\..\irobot;..\..\myrio;..\..\visa;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\visa;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\..\..\CyberSim\</OutDir>
+    <IncludePath>..\;..\target\myrio;..\target\simulator;..\..\irobot;..\..\myrio;..\..\visa;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\visa;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;MyRio_1950;LIBSTATECHARTEXAMPLE_EXPORTS;_DEBUG;_WINDOWS;_USRDLL;LIBSTATECHART_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>visa32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;MyRio_1950;LIBSTATECHARTEXAMPLE_EXPORTS;NDEBUG;_WINDOWS;_USRDLL;LIBSTATECHART_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>visa32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\irobot\irobot.c" />
+    <ClCompile Include="..\..\irobot\irobotActuator.c" />
+    <ClCompile Include="..\..\irobot\irobotCommand.c" />
+    <ClCompile Include="..\..\irobot\irobotError.c" />
+    <ClCompile Include="..\..\irobot\irobotSensor.c" />
+    <ClCompile Include="..\..\irobot\irobotSensorPoll.c" />
+    <ClCompile Include="..\..\irobot\irobotSensorStream.c" />
+    <ClCompile Include="..\..\irobot\irobotTime.c" />
+    <ClCompile Include="..\..\irobot\irobotUART.c" />
+    <ClCompile Include="..\..\irobot\xqueue.c" />
+    <ClCompile Include="..\..\myrio\Accelerometer.c" />
+    <ClCompile Include="..\..\myrio\MyRio.c" />
+    <ClCompile Include="..\..\myrio\NiFpga.c" />
+    <ClCompile Include="..\..\myrio\UART.c" />
+    <ClCompile Include="..\irobotNavigationStatechart.c" />
+    <ClCompile Include="..\target\simulator\irobotNavigationStatechartSimulation.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\irobot\irobot.h" />
+    <ClInclude Include="..\..\irobot\irobotActuator.h" />
+    <ClInclude Include="..\..\irobot\irobotActuatorTypes.h" />
+    <ClInclude Include="..\..\irobot\irobotCommand.h" />
+    <ClInclude Include="..\..\irobot\irobotError.h" />
+    <ClInclude Include="..\..\irobot\irobotOpcode.h" />
+    <ClInclude Include="..\..\irobot\irobotSensor.h" />
+    <ClInclude Include="..\..\irobot\irobotSensorPoll.h" />
+    <ClInclude Include="..\..\irobot\irobotSensorStream.h" />
+    <ClInclude Include="..\..\irobot\irobotSensorTypes.h" />
+    <ClInclude Include="..\..\irobot\irobotTime.h" />
+    <ClInclude Include="..\..\irobot\irobotTypes.h" />
+    <ClInclude Include="..\..\irobot\irobotUART.h" />
+    <ClInclude Include="..\..\irobot\xqueue.h" />
+    <ClInclude Include="..\..\myrio\Accelerometer.h" />
+    <ClInclude Include="..\..\myrio\MyRio.h" />
+    <ClInclude Include="..\..\myrio\MyRio1900.h" />
+    <ClInclude Include="..\..\myrio\MyRio1950.h" />
+    <ClInclude Include="..\..\myrio\NiFpga.h" />
+    <ClInclude Include="..\..\myrio\NiFpga_MyRio1900Fpga10.h" />
+    <ClInclude Include="..\..\myrio\NiFpga_MyRio1950Fpga10.h" />
+    <ClInclude Include="..\..\myrio\UART.h" />
+    <ClInclude Include="..\..\visa\visa.h" />
+    <ClInclude Include="..\..\visa\visatype.h" />
+    <ClInclude Include="..\irobotNavigationStatechart.h" />
+    <ClInclude Include="..\target\simulator\irobotNavigationStatechartSimulation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\visa\libvisa.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\visa\visa32.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
